@@ -3,6 +3,14 @@
 Emit the first value
 
 ```javascript
+const {
+  iterate,
+  observe,
+  interval,
+  pipe,
+  fromIter
+} = require('callbag-basics');
+
 pipe(
   fromIter([1, 2, 3, 4]),
   first(),
