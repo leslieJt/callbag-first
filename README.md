@@ -8,8 +8,7 @@
 
 ```javascript
 const {
-  iterate,
-  observe,
+  forEach,
   interval,
   pipe,
   fromIter
@@ -20,18 +19,18 @@ const first = require('callbag-first');
 pipe(
   fromIter([1, 2, 3, 4]),
   first(),
-  iterate(v => console.log(v)) // 1
+  forEach(v => console.log(v)) // 1
 );
 
 pipe(
   fromIter([1, 2, 3, 4]),
   first(v => v > 3),
-  observe(v => console.log(v)) // 4
+  forEach(v => console.log(v)) // 4
 );
 
 pipe(
   fromIter([1, 2, 3, 4]),
   first(v => v > 3, v => `value: ${v}`),
-  observe(v => console.log(v)) // value: 4
+  forEach(v => console.log(v)) // value: 4
 );
 ```
