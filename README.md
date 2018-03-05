@@ -24,13 +24,13 @@ pipe(
 );
 
 pipe(
-  interval(100),
+  fromIter([1, 2, 3, 4]),
   first(v => v > 3),
   observe(v => console.log(v)) // 4
 );
 
 pipe(
-  interval(100),
+  fromIter([1, 2, 3, 4]),
   first(v => v > 3, v => `value: ${v}`),
   observe(v => console.log(v)) // value: 4
 );
