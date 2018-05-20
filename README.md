@@ -1,5 +1,7 @@
 # callbag-first
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/leslieJt/callbag-first.svg)](https://greenkeeper.io/)
+
 [Callbag](https://github.com/callbag/callbag) operator that emit the first value emitted from source on completion, based on provided expression.
 
 `npm install callbag-first`
